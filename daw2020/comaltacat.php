@@ -47,7 +47,7 @@ if (!isset($_POST) || empty($_POST)) {
         echo ('<script language="javascript">alert("Creado correctamente")</script>');
     }
     else{
-        echo mysql_error();
+        echo mysqli_error();
     }
 }
 ?>
