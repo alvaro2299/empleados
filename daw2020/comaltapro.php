@@ -58,13 +58,13 @@ $arraycategoria=vercategoria($db);
     $precio=$_POST["precio"];
     $nombre_categoria=$_POST["categoria"];
     
-    $buscar_codigo="SELECT ID_CATEGORIA from categoria where nombre='$nombre_categoria'";
+    $buscar_codigo="SELECT ID_CATEGORIA from CATEGORIA where nombre='$nombre_categoria'";
    
     $idk=mysqli_query($db,$buscar_codigo);
     $fila=mysqli_fetch_assoc($idk);
     $codigo_departamento=$fila['ID_CATEGORIA'];
     
-    $insertar="INSERT INTO producto (ID_PRODUCTO,NOMBRE,PRECIO,ID_CATEGORIA) values('$id_producto','$nombre','$precio','$codigo_departamento')";
+    $insertar="INSERT INTO PRODUCTO (ID_PRODUCTO,NOMBRE,PRECIO,ID_CATEGORIA) values('$id_producto','$nombre','$precio','$codigo_departamento')";
     
     if(mysqli_query($db,$insertar)){
  echo ('<script language="javascript">alert("Creado correctamente")</script>');
