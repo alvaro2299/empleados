@@ -41,7 +41,7 @@ if (!isset($_POST) || empty($_POST)) {
     $id=$_POST["id"];
     $nombre=$_POST["nombre"];
 	// Aquí va el código al pulsar submit
-    $crear_categoria="INSERT into categoria (ID_CATEGORIA,NOMBRE) values('$id','$nombre')";
+    $crear_categoria="INSERT into CATEGORIA (ID_CATEGORIA,NOMBRE) values('$id','$nombre')";
     
     if(mysqli_query($db,$crear_categoria)){
         echo ('<script language="javascript">alert("Creado correctamente")</script>');
