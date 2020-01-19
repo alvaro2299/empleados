@@ -80,7 +80,7 @@ $arraycategoria=vercategoria($db);
 
 function vercategoria($db){
     $categoria=array();
-    $sql = "SELECT NOMBRE FROM categoria";
+    $sql = "SELECT NOMBRE FROM CATEGORIA";
     $resultado=mysqli_query($db,$sql);
     if($resultado){
         while($fila=mysqli_fetch_assoc($resultado)){
